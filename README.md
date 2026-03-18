@@ -33,17 +33,3 @@ Pet-проект: веб-сервис для записи на стрижку с
 - **SQLite** (для разработки) / PostgreSQL (для продакшна)
 - **Git, GitHub**
 
-## 📸 Скриншоты
-
-*(Добавьте реальные скриншоты вашего приложения. Это очень важно!)*
-
-| Главная страница | Личный кабинет | Админ-панель |
-|------------------|----------------|--------------|
-| ![index](screenshots/index.png) | ![profile](screenshots/profile.png) | ![admin](screenshots/admin.png) |
-
-## ⚙️ Установка и запуск
-
-### 1. Клонирование
-```bash
-git clone https://github.com/your-username/barber-appointment.git
-cd barber-appointment
