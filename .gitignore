@@ -1,0 +1,32 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# База данных
+instance/
+*.db
+*.sqlite3
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Файлы окружения
+.env
+.flaskenv
+*.log
+
+# Дистрибутивы
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="mb-4 text-center">Запись на стрижку</h1>
+
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+                {{ form.master.label(class="form-label") }}
+                {{ form.master(class="form-select") }}
+                {% if form.master.errors %}
+                    <div class="text-danger">
+                        {% for error in form.master.errors %}
+                            <small>{{ error }}</small>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.service.label(class="form-label") }}
+                {{ form.service(class="form-select") }}
+                {% if form.service.errors %}
+                    <div class="text-danger">
+                        {% for error in form.service.errors %}
+                            <small>{{ error }}</small>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.date.label(class="form-label") }}
+                {{ form.date(class="form-control", type="date") }}
+                {% if form.date.errors %}
+                    <div class="text-danger">
+                        {% for error in form.date.errors %}
+                            <small>{{ error }}</small>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.time.label(class="form-label") }}
+                {{ form.time(class="form-control", type="time") }}
+                {% if form.time.errors %}
+                    <div class="text-danger">
+                        {% for error in form.time.errors %}
+                            <small>{{ error }}</small>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg">Записаться</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,252 @@
+/* static/style.css */
+:root {
+    --bg-dark: #0f0f0f;
+    --bg-card: #1a1a1a;
+    --bg-input: #252525;
+    --text-primary: #f0f0f0;
+    --text-secondary: #aaaaaa;
+    --accent: #c9a96b;        /* приглушённое золото/песок */
+    --accent-hover: #b38b4d;
+    --border-color: #333333;
+    --success-bg: #1e3a2e;
+    --success-text: #8bc34a;
+    --danger-bg: #3e2a2a;
+    --danger-text: #ff8a8a;
+    --warning-bg: #3e3a1e;
+    --warning-text: #ffd966;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Навбар */
+.navbar {
+    background-color: #000000 !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--accent) !important;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    margin-right: 6px;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: color 0.2s;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+.nav-link i {
+    margin-right: 4px;
+}
+
+/* Кнопки */
+.btn-gold {
+    background-color: var(--accent);
+    color: #000000;
+    border: none;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-hover);
+    color: #000000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-outline-gold {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--accent);
+    color: #000;
+}
+
+/* Карточки */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #000000;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+}
+
+.card-header i {
+    margin-right: 8px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Формы */
+.form-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.input-group-text {
+    background-color: #000000;
+    border: 1px solid var(--border-color);
+    color: var(--accent);
+    border-radius: 8px 0 0 8px;
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 0 8px 8px 0;
+    padding: 0.6rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #2a2a2a;
+    border-color: var(--accent);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 3px rgba(201, 169, 107, 0.2);
+    outline: none;
+}
+
+/* Алерты */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.alert-success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-left: 4px solid #8bc34a;
+}
+
+.alert-danger {
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border-left: 4px solid #ff8a8a;
+}
+
+.alert-warning {
+    background-color: var(--warning-bg);
+    color: var(--warning-text);
+    border-left: 4px solid #ffd966;
+}
+
+.alert-info {
+    background-color: #1e3a4a;
+    color: #8ad4ff;
+    border-left: 4px solid #4aa3ff;
+}
+
+/* Футер */
+.footer {
+    background-color: #000000;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* Карточки мастеров */
+.master-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.master-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.master-card i {
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.master-card h4 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.master-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.service-badge {
+    background-color: var(--accent);
+    color: #000;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin: 0.2rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+/* Записи в профиле */
+.appointment-card {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+.appointment-card:hover {
+    border-color: var(--accent);
+}
+
+.badge-status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.bg-pending { background-color: #5a4a2a; color: #ffd966; }
+.bg-confirmed { background-color: #1e4a2a; color: #8bc34a; }
+.bg-cancelled { background-color: #4a2a2a; color: #ff8a8a; }

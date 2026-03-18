@@ -1,0 +1,11 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Login
+Flask-WTF
+WTForms
+email-validator
+Flask-RESTful
+Flask-LDAP  # для LDAP аутентификации (опционально)
+pytest
+pytest-flask
